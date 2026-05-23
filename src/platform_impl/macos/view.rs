@@ -887,6 +887,7 @@ impl WinitView {
         }
 
         // Clear markedText
+        println!("Clearing marked text with length {}", self.ivars().marked_text.borrow().length());
         *self.ivars().marked_text.borrow_mut() = NSMutableAttributedString::new();
 
         if self.ivars().ime_state.get() != ImeState::Disabled {
